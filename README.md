@@ -18,7 +18,7 @@ Ensure you have the following installed:
 
 ### Clone the Repository
 ```sh
-git clone https://github.com/yourusername/virtual-labs-2.0.git
+git clone https://github.com/Polani-Keerthi-Varshini/VirtualLabs2.0.git
 cd virtual-labs-2.0
 npm install
 npm run dev
