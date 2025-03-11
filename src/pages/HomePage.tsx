@@ -175,17 +175,17 @@ export default function HomePage() {
   ];
 
   const institutes = [
-    { name: "IIT Kharagpur", logo: "/src/images/iitkharagpur.png" },
-    { name: "IIT Roorkee", logo: "/src/images/iitroorke.jpg" },
-    { name: "IIT Guwahati", logo: "/src/images/iitguwahati.png" },
-    { name: "IIT Delhi", logo: "/src/images/iitdelhi.png" },
-    { name: "IIT Bombay", logo: "/src/images/iitbombay.png" },
-    { name: "IIT Kanpur", logo: "/src/images/iitkanpur.png" },
-    { name: "IIIT Hyderabad", logo: "/src/images/iithyd.png" },
-    { name: "Amrita Vishwa Vidyapeetham", logo: "/src/images/amrita.png" },
-    { name: "Dayalbagh Educational Institute", logo: "/src/images/dayalbagh.jpg" },
-    { name: "NITK Surathkal", logo: "/src/images/nitk.jpg" },
-    { name: "COEP Technological University Pune", logo: "/src/images/coep.jpg" },
+    { name: "IIT Kharagpur", logo: "https://www.vlab.co.in/Inst_logo/iit-kharagpur.png" },   
+    { name: "IIT Roorkee", logo: "https://www.vlab.co.in/Inst_logo/iit-roorkee.jpg" },
+    { name: "IIT Guwahati", logo: "https://www.vlab.co.in/Inst_logo/iit-guwahati.png" },
+    { name: "IIT Delhi", logo: "https://www.vlab.co.in/Inst_logo/iit-delhi.png" },
+    { name: "IIT Bombay", logo: "https://www.vlab.co.in/Inst_logo/iit-bombay.png" },
+    { name: "IIT Kanpur", logo: "https://www.vlab.co.in/Inst_logo/iit-kanpur.png" },
+    { name: "IIIT Hyderabad", logo: "https://www.vlab.co.in/Inst_logo/iiit-hyderabad.png" },
+    { name: "Amrita Vishwa Vidyapeetham", logo: "https://www.vlab.co.in/Inst_logo/amrita-vishwa-vidyapeetham.png" },
+    { name: "Dayalbagh Educational Institute", logo: "https://www.vlab.co.in/Inst_logo/dayabagh-university.jpg" },
+    { name: "NITK Surathkal", logo: "https://www.vlab.co.in/Inst_logo/nit-surathkal.png" },
+    { name: "COEP Technological University Pune", logo: "https://www.vlab.co.in/Inst_logo/coe-pune-logo.png" },
   ];
 
   const labs = [
@@ -358,7 +358,7 @@ export default function HomePage() {
             <div className="flex items-center space-x-3">
               {/* Added Virtual Labs Logo */}
               <img 
-                src="/src/images/vlab.png"  
+                src="https://www.vlab.co.in/images/logo.jpg"  
                 alt="Virtual Labs Logo" 
                 className="h-10 w-auto"
               />
@@ -477,7 +477,7 @@ export default function HomePage() {
       </div>
 
       {/* Participating Institutes */}
-<div className="py-16 bg-gray-800">
+<div className="py-16 bg-gray-900">
   <div className="max-w-7xl mx-auto px-4">
     <h2 className="text-3xl font-bold text-center mb-12">
       <span className="bg-gradient-to-r from-sky-400 to-green-400 bg-clip-text text-transparent">Participating Institutes</span>
@@ -485,7 +485,7 @@ export default function HomePage() {
     <div className="grid md:grid-cols-5 gap-8">
       {institutes.map((institute, index) => (
         <div key={index} className="flex flex-col items-center group">
-          <div className="w-24 h-24 bg-gray-700 rounded-full flex items-center justify-center shadow-md border-2 border-transparent group-hover:border-sky-500 transition-all duration-300 transform group-hover:scale-110">
+          <div className="w-24 h-24 bg-gray-100 rounded-full flex items-center justify-center shadow-md border-2 border-transparent group-hover:border-sky-500 transition-all duration-300 transform group-hover:scale-110">
             <img
               src={institute.logo}
               alt={institute.name}

@@ -1,17 +1,17 @@
 import React, { useState, useEffect } from "react";
 
 const institutes = [
-  { name: "IIT Kharagpur", logo: "/src/images/iitkharagpur.png" },
-  { name: "IIT Roorkee", logo: "/src/images/iitroorke.jpg" },
-  { name: "IIT Guwahati", logo: "/src/images/iitguwahati.png" },
-  { name: "IIT Delhi", logo: "/src/images/iitdelhi.png" },
-  { name: "IIT Bombay", logo: "/src/images/iitbombay.png" },
-  { name: "IIT Kanpur", logo: "/src/images/iitkanpur.png" },
-  { name: "IIIT Hyderabad", logo: "/src/images/iithyd.png" },
-  { name: "Amrita Vishwa Vidyapeetham", logo: "/src/images/amrita.png" },
-  { name: "Dayalbagh Educational Institute", logo: "/src/images/dayalbagh.jpg" },
-  { name: "NITK Surathkal", logo: "/src/images/nitk.jpg" },
-  { name: "COEP Technological University Pune", logo: "/src/images/coep.jpg" },
+  { name: "IIT Kharagpur", logo: "https://www.vlab.co.in/Inst_logo/iit-kharagpur.png" },   
+  { name: "IIT Roorkee", logo: "https://www.vlab.co.in/Inst_logo/iit-roorkee.jpg" },
+  { name: "IIT Guwahati", logo: "https://www.vlab.co.in/Inst_logo/iit-guwahati.png" },
+  { name: "IIT Delhi", logo: "https://www.vlab.co.in/Inst_logo/iit-delhi.png" },
+  { name: "IIT Bombay", logo: "https://www.vlab.co.in/Inst_logo/iit-bombay.png" },
+  { name: "IIT Kanpur", logo: "https://www.vlab.co.in/Inst_logo/iit-kanpur.png" },
+  { name: "IIIT Hyderabad", logo: "https://www.vlab.co.in/Inst_logo/iiit-hyderabad.png" },
+  { name: "Amrita Vishwa Vidyapeetham", logo: "https://www.vlab.co.in/Inst_logo/amrita-vishwa-vidyapeetham.png" },
+  { name: "Dayalbagh Educational Institute", logo: "https://www.vlab.co.in/Inst_logo/dayabagh-university.jpg" },
+  { name: "NITK Surathkal", logo: "https://www.vlab.co.in/Inst_logo/nit-surathkal.png" },
+  { name: "COEP Technological University Pune", logo: "https://www.vlab.co.in/Inst_logo/coe-pune-logo.png" },
 ];
 
 const ParticipatingInstitutes = () => {
