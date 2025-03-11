@@ -20,41 +20,16 @@ Ensure you have the following installed:
 ```sh
 git clone https://github.com/yourusername/virtual-labs-2.0.git
 cd virtual-labs-2.0
-```
-
-### Frontend Setup
-```sh
-cd frontend
 npm install
-npm start
-```
-
-### Backend Setup
-```sh
-cd backend
-pip install -r requirements.txt
-python manage.py runserver
+npm run dev
 ```
 
 ### Running the Project
-Ensure both frontend and backend are running:
-1. Start the backend server (`python manage.py runserver`)
-2. Start the frontend (`npm start`)
-3. Access the application at `http://localhost:3000`
+Start the app (`npm run dev`)
+Access the application at `http://localhost:3000`
 
 ## Deployment
 The platform is deployed on **Vercel** for frontend and cloud-based services for backend scalability.
 
-## Contributing
-We welcome contributions! Follow these steps:
-1. Fork the repository.
-2. Create a feature branch (`git checkout -b feature-branch`).
-3. Commit your changes (`git commit -m "Add new feature"`).
-4. Push to the branch (`git push origin feature-branch`).
-5. Submit a pull request.
-
 ## License
 This project is licensed under the MIT License.
-
-## Contact
-For queries and collaborations, reach out at [your-email@example.com](mailto:your-email@example.com).
