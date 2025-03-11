@@ -117,9 +117,7 @@ const ParticipatingInstitutes = () => {
           </svg>
         </div>
         <div className="relative p-8 text-white">
-          <nav className="text-sm mb-4 opacity-80">
-            <span className="hover:text-sky-300 hover:underline cursor-pointer transition-colors">Home</span> &raquo; Participating Institutes
-          </nav>
+          <br></br>
           <h1 className="text-4xl font-bold mb-2 text-transparent bg-clip-text bg-gradient-to-r from-sky-300 to-green-300">
             Participating Institutes
           </h1>
@@ -155,9 +153,8 @@ const ParticipatingInstitutes = () => {
                   {institute.name}
                 </h2>
                 <div className="mt-3 flex justify-center">
-                  <button className="px-4 py-2 text-sm bg-gradient-to-r from-sky-600 to-green-600 text-white rounded-full transform transition-all duration-300 hover:scale-105 hover:shadow-md hover:shadow-sky-500/50 hover:from-sky-500 hover:to-green-500">
-                    View Details
-                  </button>
+                <a href="https://www.vlab.co.in/nc-login" target="_blank" rel="noopener noreferrer">
+                  <button className="px-4 py-2 text-sm bg-gradient-to-r from-sky-600 to-green-600 text-white rounded-full transform transition-all duration-300 hover:scale-105 hover:shadow-md hover:shadow-sky-500/50 hover:from-sky-500 hover:to-green-500">View Details</button></a>
                 </div>
               </div>
             </div>

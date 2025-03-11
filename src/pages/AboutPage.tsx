@@ -41,9 +41,10 @@ export default function AboutPage() {
           <div className="text-center text-white max-w-4xl px-4">
             <h1 className="text-4xl md:text-5xl font-bold mb-6 animate-fadeIn">About Virtual Labs</h1>
             <p className="text-xl md:text-2xl animate-fadeIn animation-delay-300">Empowering Education Through Virtual Learning Experience</p>
-            <button className="mt-8 bg-cyan-500 hover:bg-cyan-400 transition-all duration-300 transform hover:scale-105 text-white font-semibold py-3 px-8 rounded-full shadow-lg shadow-cyan-500/30 animate-fadeIn animation-delay-500 hover:shadow-cyan-400/50">
-              Learn More
-            </button>
+            <a href="https://www.vlab.co.in/about-us" target="_blank" rel="noopener noreferrer" className="mt-8 inline-block">
+  <button className="bg-cyan-500 hover:bg-cyan-400 transition-all duration-300 transform hover:scale-105 text-white font-semibold py-3 px-8 rounded-full shadow-lg shadow-cyan-500/30 animate-fadeIn animation-delay-500 hover:shadow-cyan-400/50">
+    Learn More</button></a>
+
           </div>
         </div>
       </div>
@@ -193,23 +194,20 @@ export default function AboutPage() {
           <h2 className="text-3xl font-bold mb-4">Ready to explore Virtual Labs?</h2>
           <p className="text-xl mb-8 max-w-3xl mx-auto">Join millions of students and educators across the country who are enhancing their learning experience.</p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
-            <button className="px-8 py-3 bg-gray-900 text-cyan-400 font-semibold rounded-full shadow-lg hover:bg-gray-800 transition-all duration-300 transform hover:scale-105 hover:shadow-cyan-500/30 border border-cyan-700/50">
-              Browse Labs
-            </button>
-            <button className="px-8 py-3 bg-green-500 text-white font-semibold rounded-full shadow-lg hover:bg-green-400 transition-all duration-300 transform hover:scale-105 hover:shadow-green-500/50 flex items-center justify-center mx-auto sm:mx-0 border border-green-400/30">
-              <span>Get Started</span>
-              <ArrowRight className="ml-2 h-5 w-5" />
-            </button>
+          <a href="https://www.vlab.co.in/" target="_blank" rel="noopener noreferrer" className="inline-block">
+  <button className="px-8 py-3 bg-gray-900 text-cyan-400 font-semibold rounded-full shadow-lg hover:bg-gray-800 transition-all duration-300 transform hover:scale-105 hover:shadow-cyan-500/30 border border-cyan-700/50">
+    Browse Labs</button></a>
+<a href="https://www.vlab.co.in/" target="_blank" rel="noopener noreferrer"className="inline-block">
+  <button className="px-8 py-3 bg-green-500 text-white font-semibold rounded-full shadow-lg hover:bg-green-400 transition-all duration-300 transform hover:scale-105 hover:shadow-green-500/50 flex items-center justify-center mx-auto sm:mx-0 border border-green-400/30">
+    <span>Get Started</span>
+    <ArrowRight className="ml-2 h-5 w-5" />
+  </button>
+</a>
+
           </div>
         </div>
       </div>
       
-      {/* Footer */}
-      <div className="bg-gray-950 text-gray-400 py-8">
-        <div className="max-w-7xl mx-auto px-4 text-center">
-          <p>© 2025 Virtual Labs. All rights reserved.</p>
-        </div>
-      </div>
 
       {/* CSS for animations */}
       <style jsx global>{`

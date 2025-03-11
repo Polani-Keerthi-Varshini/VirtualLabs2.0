@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Link } from "react-router-dom";
 import { MapPin, Calendar, Users, Award, ChevronRight, Sparkles } from 'lucide-react';
 
 export default function OutreachPage() {
@@ -40,14 +41,14 @@ export default function OutreachPage() {
       date: "February 15, 2025",
       location: "IIT Bombay",
       participants: 200,
-      image: "/api/placeholder/400/320"
+      image: "https://www.invertisuniversity.ac.in/Uploads/LargeImages/770rkl-workshop.jpg"
     },
     {
       title: "Faculty Development Program",
       date: "January 20, 2025",
       location: "IIIT Bangalore",
       participants: 150,
-      image: "/api/placeholder/400/320"
+      image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS6KQSSt428QIIrlYPyFzJ-4zksQ2kYk9zNQA&s"
     }
   ];
 
@@ -140,10 +141,16 @@ export default function OutreachPage() {
               </span>
             </h1>
             <p className="text-xl md:text-2xl">Connecting Communities Through Virtual Labs</p>
-            <button className="mt-8 bg-gradient-to-r from-sky-500 to-green-500 text-white px-6 py-3 rounded-full font-semibold shadow-lg transform transition-transform duration-300 hover:scale-105 group relative overflow-hidden">
-              <span className="relative z-10">Explore Programs</span>
-              <span className="absolute inset-0 bg-gradient-to-r from-green-500 to-sky-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
-            </button>
+            <a 
+  href="https://centraloutreach.vlabs.co.in/" 
+  target="_blank" 
+  rel="noopener noreferrer"
+  className="mt-8 bg-gradient-to-r from-sky-500 to-green-500 text-white px-6 py-3 rounded-full font-semibold shadow-lg transform transition-transform duration-300 hover:scale-105 group relative overflow-hidden text-center inline-block"
+>
+  <span className="relative z-10">Explore Programs</span>
+  <span className="absolute inset-0 bg-gradient-to-r from-green-500 to-sky-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
+</a>
+
           </div>
         </div>
       </div>
@@ -245,10 +252,8 @@ export default function OutreachPage() {
                       {event.participants} Participants
                     </div>
                   </div>
-                  <button className="mt-4 flex items-center text-green-400 font-medium hover:text-sky-400 transition-colors group">
-                    View Details
-                    <ChevronRight className="h-5 w-5 ml-1 transition-transform group-hover:translate-x-1" />
-                  </button>
+                  <a href="https://www.youtube.com/watch?v=rBfKsEtJ5uE&t=66s" target="_blank" rel="noopener noreferrer" className="mt-4 flex items-center text-green-400 font-medium hover:text-sky-400 transition-colors group"> View Details <ChevronRight className="h-5 w-5 ml-1 transition-transform group-hover:translate-x-1" /></a>
+
                 </div>
               </div>
             ))}

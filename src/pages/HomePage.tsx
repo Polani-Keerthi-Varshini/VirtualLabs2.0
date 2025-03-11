@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Search, Box, BookOpen, ArrowRight, Play, Menu, X } from 'lucide-react';
 import ElectronicsPage from './ElectronicsPage';
 import ComputerSciencePage from './ComputerSciencePage';
-import BiotechnologyPage from './pages/BiotechnologyPage.jsx';
+import BiotechnologyPage from './BiotechnologyPage.jsx';
 import ChemicalPage from './ChemicalPage';
 import CivilPage from './CivilPage';
 import ElectricalPage from './ElectricalPage';
@@ -11,7 +11,7 @@ import PhysicalSciencesPage from './PhysicalSciencesPage';
 import AboutPage from './AboutPage';
 import InstitutesPage from './InstitutesPage';
 import OutreachPage from './OutreachPage';
-
+<link rel="icon" type="image/png" href="/src/images/vlab.png" />
 // Navbar button component with light blue and light green gradient
 const NavButton = ({ name, onClick, isActive = false }) => {
   return (
@@ -58,9 +58,11 @@ export default function HomePage() {
   // Navigation links - updated with handlers for all links
   const navLinks = [
     { name: 'Home', url: '#', handler: () => setCurrentPage('home') },
-    { name: 'About', url: '#', handler: () => setCurrentPage('about') },
+    { name: 'About Us', url: '#', handler: () => setCurrentPage('about') },
     { name: 'Outreach Portal', url: '#', handler: () => setCurrentPage('outreach') },
     { name: 'Institutes', url: '#', handler: () => setCurrentPage('institutes') },
+    { name: 'NMEICT', url: 'https://nmeict.ac.in/', handler: () => window.open('https://nmeict.ac.in/', '_blank') }
+
   ];
 
   // Text animation effect with staggered appearance
@@ -206,17 +208,45 @@ export default function HomePage() {
   ];
 
   // State to track if Electronics & Communications page is open
+  // States to track which page is currently open
   const [showElectronicsPage, setShowElectronicsPage] = useState(false);
-
-  // State to track if Computer Science page is open
   const [showComputerSciencePage, setShowComputerSciencePage] = useState(false);
+  const [showBiotechnologyPage, setShowBiotechnologyPage] = useState(false);
+  const [showChemicalPage, setShowChemicalPage] = useState(false);
+  const [showCivilPage, setShowCivilPage] = useState(false);
+  const [showElectricalPage, setShowElectricalPage] = useState(false);
+  const [showMechanicalPage, setShowMechanicalPage] = useState(false);
+  const [showPhysicalSciencesPage, setShowPhysicalSciencesPage] = useState(false);
 
   // Handler for clicking on a broad area
   const handleBroadAreaClick = (areaTitle) => {
-    if (areaTitle === 'Electronics & Communications') {
-      setShowElectronicsPage(true);
-    } else if (areaTitle === 'Computer Science & Engineering') {
-      setShowComputerSciencePage(true);
+    switch(areaTitle) {
+      case 'Electronics & Communications':
+        setShowElectronicsPage(true);
+        break;
+      case 'Computer Science & Engineering':
+        setShowComputerSciencePage(true);
+        break;
+      case 'Biotechnology and Biomedical Engineering':
+        setShowBiotechnologyPage(true);
+        break;
+      case 'Chemical Engineering':
+        setShowChemicalPage(true);
+        break;
+      case 'Civil Engineering':
+        setShowCivilPage(true);
+        break;
+      case 'Electrical Engineering':
+        setShowElectricalPage(true);
+        break;
+      case 'Mechanical Engineering':
+        setShowMechanicalPage(true);
+        break;
+      case 'Physical Sciences':
+        setShowPhysicalSciencesPage(true);
+        break;
+      default:
+        break;
     }
   };
 
@@ -224,32 +254,59 @@ export default function HomePage() {
   const handleBackToHome = () => {
     setShowElectronicsPage(false);
     setShowComputerSciencePage(false);
+    setShowBiotechnologyPage(false);
+    setShowChemicalPage(false);
+    setShowCivilPage(false);
+    setShowElectricalPage(false);
+    setShowMechanicalPage(false);
+    setShowPhysicalSciencesPage(false);
     setCurrentPage('home');
   };
 
-  // If showing Electronics page
+  // Return the appropriate page based on current state
   if (showElectronicsPage) {
     return <ElectronicsPage onBackToHome={handleBackToHome} />;
   }
 
-  // If Institutes page is selected
+  if (showComputerSciencePage) {
+    return <ComputerSciencePage onBackToHome={handleBackToHome} />;
+  }
+
+  if (showBiotechnologyPage) {
+    return <BiotechnologyPage onBackToHome={handleBackToHome} />;
+  }
+
+  if (showChemicalPage) {
+    return <ChemicalPage onBackToHome={handleBackToHome} />;
+  }
+
+  if (showCivilPage) {
+    return <CivilPage onBackToHome={handleBackToHome} />;
+  }
+
+  if (showElectricalPage) {
+    return <ElectricalPage onBackToHome={handleBackToHome} />;
+  }
+
+  if (showMechanicalPage) {
+    return <MechanicalPage onBackToHome={handleBackToHome} />;
+  }
+
+  if (showPhysicalSciencesPage) {
+    return <PhysicalSciencesPage onBackToHome={handleBackToHome} />;
+  }
+
+  // For navigation pages
   if (currentPage === 'institutes') {
     return <InstitutesPage onBackToHome={handleBackToHome} />;
   }
 
-  // If Outreach Portal page is selected
   if (currentPage === 'outreach') {
     return <OutreachPage onBackToHome={handleBackToHome} />;
   }
 
-  // If About page is selected
   if (currentPage === 'about') {
     return <AboutPage onBackToHome={handleBackToHome} />;
-  }
-
-  // If showing Computer Science & Engineering page
-  if (showComputerSciencePage) {
-    return <ComputerSciencePage onBackToHome={handleBackToHome} />;
   }
 
   if (showIntro) {
@@ -301,7 +358,7 @@ export default function HomePage() {
             <div className="flex items-center space-x-3">
               {/* Added Virtual Labs Logo */}
               <img 
-                src="https://upload.wikimedia.org/wikipedia/commons/3/33/Vlabs.png" 
+                src="/src/images/vlab.png"  
                 alt="Virtual Labs Logo" 
                 className="h-10 w-auto"
               />
@@ -550,12 +607,6 @@ export default function HomePage() {
         </div>
       </div>
 
-      {/* Footer */}
-      <div className="bg-gray-800 text-white py-8">
-        <div className="max-w-7xl mx-auto px-4 text-center">
-          <p className="text-gray-400">© 2025 Virtual Labs. All rights reserved.</p>
-        </div>
-      </div>
     </div>
   );
 }

@@ -15,10 +15,10 @@ const ComputerSciencePage = () => {
   // Navigation links with proper routing
   const navLinks = [
     { name: "Home", url: "/", action: navigateToHome },
-    { name: "About", url: "#" },
-    { name: "Labs", url: "#" },
-    { name: "Resources", url: "#" },
-    { name: "Contact", url: "#" }
+    { name: "About", url: "/" },
+    { name: "Labs", url: "/" },
+    { name: "Resources", url: "/" },
+    { name: "Contact", url: "/" }
   ];
 
   // Sample computer science labs data
@@ -106,12 +106,6 @@ const ComputerSciencePage = () => {
                   <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-sky-400 to-green-400 transition-all duration-300 group-hover:w-full"></span>
                 </a>
               ))}
-              <button className="bg-gradient-to-r from-sky-300 to-green-300 text-sky-800 font-medium py-2 px-4 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-md">
-                Login
-              </button>
-              <button className="bg-gradient-to-r from-green-300 to-sky-300 text-green-800 font-medium py-2 px-4 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-md">
-                Sign Up
-              </button>
             </div>
             
             {/* Mobile Menu Button */}
@@ -145,12 +139,7 @@ const ComputerSciencePage = () => {
                   </a>
                 ))}
                 <div className="flex space-x-2 pt-2">
-                  <button className="bg-gradient-to-r from-sky-300 to-green-300 text-sky-800 font-medium py-2 px-4 rounded-lg transition-all duration-300 transform hover:scale-105 flex-1">
-                    Login
-                  </button>
-                  <button className="bg-gradient-to-r from-green-300 to-sky-300 text-green-800 font-medium py-2 px-4 rounded-lg transition-all duration-300 transform hover:scale-105 flex-1">
-                    Sign Up
-                  </button>
+
                 </div>
               </div>
             </div>
@@ -161,7 +150,7 @@ const ComputerSciencePage = () => {
       {/* Computer Science Header - Enhanced with gradient */}
       <div className="pt-24 pb-6 bg-gradient-to-r from-sky-600 to-green-600">
         <div className="max-w-7xl mx-auto px-4">
-          <h1 className="text-3xl font-bold text-white">Computer Science & Engineering</h1>
+          <h1 className="text-3xl font-bold text-white">Electrical Engineering</h1>
           <div className="mt-4 text-white">
             <button 
               onClick={navigateToHome} 

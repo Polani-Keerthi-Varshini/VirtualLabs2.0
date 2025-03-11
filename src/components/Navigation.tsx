@@ -26,7 +26,6 @@ export default function Navigation() {
             <Link to="/about" className={`${isActive('/about') ? 'text-blue-600' : 'text-gray-600 hover:text-blue-600'} font-medium`}>About Us</Link>
             <Link to="/outreach" className={`${isActive('/outreach') ? 'text-blue-600' : 'text-gray-600 hover:text-blue-600'} font-medium`}>Outreach Portal</Link>
             <Link to="/institutes" className={`${isActive('/institutes') ? 'text-blue-600' : 'text-gray-600 hover:text-blue-600'} font-medium`}>Institutes</Link>
-            <Link to="/contact" className={`${isActive('/contact') ? 'text-blue-600' : 'text-gray-600 hover:text-blue-600'} font-medium`}>Contact</Link>
           </div>
 
           {/* Mobile menu button */}
@@ -49,7 +48,6 @@ export default function Navigation() {
             <Link to="/about" className={`block px-3 py-2 ${isActive('/about') ? 'text-blue-600' : 'text-gray-600 hover:text-blue-600'} font-medium`}>About Us</Link>
             <Link to="/outreach" className={`block px-3 py-2 ${isActive('/outreach') ? 'text-blue-600' : 'text-gray-600 hover:text-blue-600'} font-medium`}>Outreach Portal</Link>
             <Link to="/institutes" className={`block px-3 py-2 ${isActive('/institutes') ? 'text-blue-600' : 'text-gray-600 hover:text-blue-600'} font-medium`}>Institutes</Link>
-            <Link to="/contact" className={`block px-3 py-2 ${isActive('/contact') ? 'text-blue-600' : 'text-gray-600 hover:text-blue-600'} font-medium`}>Contact</Link>
           </div>
         </div>
       )}
